@@ -1,0 +1,15 @@
+<style>
+    div {
+       display: inline-block;
+       background-color: aquamarine;
+       border: 1px solid black;
+       text-align: center;
+       height: 150px; 
+       width: 150px; } 
+    div#d1 { 
+       background-color ;} 
+   div:hover {
+       background-color: yellow;
+   }
+
+   </style>
