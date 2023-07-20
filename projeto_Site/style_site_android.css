@@ -88,7 +88,7 @@ main { /* Conteudo principal */
         background-color:  white;   
         min-width: 300px; /* Largura min do conteudo */    
         max-width: 1000px; /* Largura max do conteudo */ 
-        margin: auto;
+        margin: auto; /*serve para deixar conteudo no modo auto , centralizando-o sempre */
         margin-bottom: 30px;
         padding: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.308);

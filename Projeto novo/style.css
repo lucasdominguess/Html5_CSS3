@@ -1,0 +1,23 @@
+
+div.quadrado {
+            display: inline-block;
+            border: 1px solid black;
+            width: 250px;
+            height: 250px ;
+            border-radius:  10px;
+            background-color: lightgray;
+} /**/
+div#q1 { 
+    background-color:skyblue;
+
+}
+
+div#q2 { /*colocando Cor em modo degrade*/
+    background-image: linear-gradient(to bottom , yellow, red);
+
+} 
+div#q3 { /*colocando imagens de fundo  no quadrado"menu" */
+    background-image: url('imagens/pattern001.png');
+    
+        }
+    
