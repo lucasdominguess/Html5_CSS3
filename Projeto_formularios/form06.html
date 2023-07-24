@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 06</title>
+</head>
+<body>
+    <h1>select | option |  optgroup |</h1>
+    <form action="">
+        <label for="iest">Estado</label>
+        <select name="estado" id="iest">
+            <option value=""selected>--escolha--</option>
+            <optgroup label="Regiao Sudeste">
+            <option value="MG">Minas gerais</option>
+            <option value="RJ">Rio de janeiro</option>
+            <option value="SP">São paulo</option>
+            </optgroup>
+
+            <optgroup label="Regiao Nordeste">
+            <option value="MA">Maranhao</option>
+            <option value="PE">Pernambuco</option>
+            <option value="RN">Rio grande do norte</option>
+            </optgroup>
+
+
+        </select>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+        
+        
+    <h1>Usando datalist: </h1>
+
+    <label for="iprof">Profissão</label>
+    <input type="text" name="prof" id="iprof" list="istprof">
+  
+    <datalist id="istprof">
+        <option value=""selected>--escolha--</option>
+        <option >administrador</option>
+        <option >contabilista</option>
+        <option >Desenvolvedor</option>
+        <option >professor</option>
+    </datalist>
+    
+    <p>
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+    </p> 
+
+<label for="imsg">Mensagem</label><br>
+<textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+
+    </form>
+
+
+</body>
+</html>
