@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+* { 
+
+    margin: 0px;
+    padding: 0px;
+}
+
+html { 
+    background-color: darkgrey;
+}
+h1 { 
+    color: blueviolet;
+}

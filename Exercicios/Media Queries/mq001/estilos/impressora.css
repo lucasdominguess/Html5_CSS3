@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+
+* { 
+
+    margin: 10px;
+    padding: 10px;
+}
+
+html { 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    line-height: 1em;
+    background-color: rgba(137, 43, 226, 0.253);
+}
+
+menu { 
+    display: none;
+} 
+h1 { 
+    color: red;
+}

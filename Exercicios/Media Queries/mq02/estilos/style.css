@@ -1,0 +1,15 @@
+/*configurações gerais*/ 
+
+@charset "UTF-8" ; 
+
+*{ 
+    margin: 0px;
+    padding: 0px;
+
+}
+body ,html {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: beige;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

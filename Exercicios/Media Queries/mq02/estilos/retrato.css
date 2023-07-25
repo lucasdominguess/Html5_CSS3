@@ -1,0 +1,11 @@
+/*configurações para modo retrato*/ 
+/*aparelho em pé (portrait)*/
+@charset "UTF-8" ; 
+
+
+body {
+   background: url(../imagens/cev-portrait.jpg);
+   background-position: center bottum;
+  
+  
+}
