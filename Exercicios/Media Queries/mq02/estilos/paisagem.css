@@ -1,9 +1,10 @@
 /*configurações para modo paisagem*/ 
 /*aparelho deitado (landscape)*/
-@charset "UTF-8" ; 
+@charset "UTF-8"; 
+
 
 
 body {
-    background: url(../imagens/cev-landscape.jpg);
-    background-position: left bottum;
+    background-image: url(../imagens/cev-landscape.jpg);
+    background-position: left bottom;
 }
