@@ -58,6 +58,7 @@ header .navegação-primaria li a{
     align-self: start;
     display: grid;
     gap: 30px;
+    animation: inicializar .7s forwards;
 }
 
 .section-div div h2 { 
@@ -81,4 +82,14 @@ header .navegação-primaria li a{
    max-width: 100%;
    padding: 0px;
  
+}
+@keyframes inicializar { 
+    from { 
+        opacity: 0;
+        transform: translate3d(0,-60px,0);
+    }
+    to { 
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
 }
