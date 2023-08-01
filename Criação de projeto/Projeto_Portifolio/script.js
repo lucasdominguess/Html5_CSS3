@@ -9,7 +9,7 @@
   //      });
 
 //const titulo = ducument.querySelector('.digitando');
-//ativaLetra(titulo);
+//ativaLetra(titulo
 
 document.addEventListener("DOMContentLoaded", function() { //funcionou
     function ativaLetra(elemento) {
@@ -22,10 +22,37 @@ document.addEventListener("DOMContentLoaded", function() { //funcionou
       });
     }
   
+
+    
     function escrevendoLetra() {
       const titulo = document.querySelector('.digitando');
       ativaLetra(titulo);
     }
   
-    escrevendoLetra();
-  });
+  escrevendoLetra();
+});
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() { //funcionou
+  function ativaLetra(elemento) {
+    const arrTexto = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    arrTexto.forEach((letra, i) => {
+      setTimeout(() => {
+        elemento.innerHTML += letra;
+      }, 75 * i);
+    });
+  }
+  
+  function escrevendoLetra() {
+    const titulo = document.querySelector('.ola');
+    ativaLetra(titulo);
+  }
+
+  escrevendoLetra();
+});
