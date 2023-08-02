@@ -14,7 +14,7 @@ body {
     background-color: black;
 }
 
-/*HEADER */ 
+/*/* CONFIGURAÇOES HEADER */ 
 
 header { 
     background-color: black;
@@ -41,8 +41,23 @@ header .navegação-primaria li a{
     color: white;
     font-size: 1.3rem;
 }
+header .navegação-primaria li a::after{ 
+    content: '';
+    width: 10px;
+    height: 0px;
+    display: block;
+    border-bottom: 4px solid transparent;
+    transition: .5s;
+}
+header .navegação-primaria li a:hover::after{
+    width: 100%;
+    height: 0px;
+    padding: 0px;
+    border-bottom: 4px solid #dc3545;
 
+}    
 /* Download CV secao */ 
+/* CONFIGURAÇOES .section-div */
 .section-div {
     background-color: black;
     display: grid;
@@ -107,7 +122,7 @@ main .sobre {
     justify-content: center;
     padding :40px;
 }
-
+/* CONFIGURAÇOES .sobre_titulo  */
 .sobre_titulo { 
     margin: 30px 0;
     grid-column: 1/-1;
@@ -139,7 +154,9 @@ main .sobre {
     border-radius: 50%; 
     background-color: #dc3545;
 }
-.sobre img { 
+/* CONFIGURAÇOES .sobre > img  */
+.sobre img {
+    animation: ladoSecao .5s ease-in forwards; 
     cursor: pointer;
     grid-row: 2 ;
     max-width: 100%;
@@ -150,14 +167,15 @@ main .sobre {
     transition : .5s ease-in;
     filter:blur(1px);
 }
+/* CONFIGURAÇOES .sobre_conteudo  */
 .sobre_conteudo { 
     animation: sobeSecao.6s ease-in-out forwards;
     grid-column: 2/-1;
     display: grid;
     color: #707070;
     grid-template-columns: 1fr 1fr;
-
 }
+/* CONFIGURAÇOES .sobre_texto  */
 .sobre_texto { 
     display: grid;
     grid-column: 1/-1;
@@ -187,8 +205,17 @@ main .sobre {
    /* gap :15px ; 
     align-items: center;*/
 
+} 
+/* CONFIGURAÇOES .sobre_info  */
+.sobre_info { 
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1/-1;
+    gap: 15px;
+    align-items: center;
 }
-.sobre_texto i { 
+.sobre_info i { 
     color: #dc3545;
     display: inline-block;
     padding-right: 15px;
@@ -197,6 +224,8 @@ main .sobre {
 .sobre_info p { 
     font-size: .9rem;
 }
+
+
 @keyframes sobeSecao{
     from { 
         transition:.5s ;
@@ -207,3 +236,389 @@ main .sobre {
     }
 }
   
+@keyframes ladoSecao{
+    from { 
+        transition:.5s ;
+        transform: translate3d(-60px,0,0);
+    }
+    to { 
+        transform: translate3d(0,0,0);
+    }
+}
+
+/* RESPONSIVO */ 
+ 
+    
+
+@media(max-width:992px) {
+    .section-div img { 
+        display: none;
+    }
+    .section-div { 
+        background-image: url(Imagens/kat\ 500x313.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header { 
+        justify-content: space-between;
+        padding: 30px 70px;
+    }
+
+    header .navegação-primaria{ 
+        display:none;
+    }
+    header .navegação-primaria.ativado {
+        background:linear-gradient(red ,blue );
+        position: absolute;
+        display: grid;
+        top: 80px; 
+        color:white; 
+        z-index: 1;
+        padding: 10px;
+        font-size: 1.6rem;
+        font-weight: bold;
+        border-radius: 6px 6px 6px 6px;
+        right: 20px;
+        animation: sobeSecao .6s ease-in-out forwards;
+    }
+    header i { 
+        color: #f7f7f7;
+        font-size: 2rem;
+
+    }
+ }
+
+@media(max-width:992px) { 
+    .sobre img { 
+        grid-column: 1/-1;
+        justify-self: center;
+    }
+    .sobre_conteudo { 
+        grid-column: 1/-1;
+    }
+ }
+
+ /*Configuraçoes My_services */ 
+ .services { 
+    margin-top: 30px;
+    padding: 60px;
+    background-color: #151515;
+
+ }
+ .my_services { 
+    color: white ;
+    padding: 60px;
+
+ }
+.my_services ul { 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.my_services ul li { 
+    cursor:pointer; 
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    display: grid;
+    gap:30px; 
+    text-align: center;
+    max-width: 300px;
+    align-content: center;
+    height:300px;
+    background-color: #222;
+    margin: 10px ;
+
+}
+.my_services ul li i { 
+    font-size: 1.7em;
+    color: #dc3545;
+}
+.my_services ul li h3 { 
+    color: white;
+    font-size: 1.6em;
+    font-weight: 500;
+
+}
+.my_services ul li p {
+    color :#707070 ;
+}
+
+.my_services li::before { 
+    border-radius: 6px;
+    content:''; 
+    transition: .4s ease-in-out;
+    width: 0px; 
+    height: 0px; 
+    position: absolute; 
+    top:-2px; 
+    right: -2px;
+    border-top: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.my_services li::after { 
+    border-radius: 6px;
+    transition: .4s ease-in-out;
+    content:''; 
+    width: 0px; 
+    height: 0px; 
+    position: absolute; 
+    bottom:-2px; 
+    left: -2px;
+    border-bottom: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.my_services li:hover::before { 
+    width:100% ; 
+    height: 100%;
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+    
+
+}
+.my_services li:hover::after { 
+    width:100% ; 
+    height: 100%;
+    border-bottom: 2px solid red;
+    border-left: 2px solid red;
+}
+/*Configuraçoes my-resume*/
+.resume_generica { 
+    padding: 30px;
+    display: grid;
+    grid-template-columns:  1fr 1fr;
+    justify-content: center;
+    gap:10px;
+    align-items: start;
+}
+.resume_generica h2{
+    font-size: 1.5em;
+    background-color: #ff5d56;
+    justify-self: start;
+    padding: 10px;
+    border-radius: 3px;
+    color: white;
+}
+.resume_generica h2 i{
+    margin-right: 10px;
+    
+
+}
+
+.experience { 
+    margin-bottom: 30px;
+    grid-column: 1;
+    grid-row: 1;
+}
+.education { 
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+    
+}
+.experience_content ul { 
+    color: #dc3545 ;
+    gap:10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+
+}
+
+.resume_generica .experience_content div { 
+    background-color: #222;
+    padding: 40px; 
+    position: relative;
+    color: white;
+    animation: ladoSecao .5s ease-in-out forwards;
+    display: none;
+}
+.resume_generica .experience_content div.ativo { 
+    display: block;
+}
+
+.resume_generica .experience_content div::before { 
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+
+}
+.resume_generica .experience_content div span { 
+    color: #dc3545;
+    font-weight: bolder ;
+
+
+}
+.resume_generica .experience_content div h3 { 
+    margin:  10px 0;
+
+
+}
+.resume_generica .experience_content div p { 
+    color :#d0c3c3;
+}
+.experience_content ul li.ativo { 
+    color: #3e3d3d;
+}
+
+/* Config Diplomas e Cursos */ 
+.resume_generica .education_content div { 
+    background-color: #222;
+    padding: 40px; 
+    display: none;
+    animation: ladoSecao .5s ease-in-out forwards;
+    position: relative;
+}
+
+.resume_generica .education_content div::before { 
+    content: '';
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid #222;
+    position: absolute;
+    top: -20px;
+    left: 30px;
+    display: inline-block;
+
+}
+
+.resume_generica .education_content div span { 
+    color: #dc3545;
+    font-weight: bolder ;  
+}
+.resume_generica .education_content div h3 { 
+    margin:  10px 0;
+    color: white;
+}
+.resume_generica .education_content div p{ 
+    color :#d0c3c3;
+}
+.education_content ul { 
+    color: #dc3545 ;
+    gap:10px;
+    display: flex;
+    cursor: pointer;
+    margin-top: 20px;
+    justify-content: center;
+}
+.education_content ul li.ativo { 
+    color: #3e3d3d;
+}
+
+.resume_generica .education_content div.ativo { 
+    display: block; 
+
+}
+
+    
+/*Cursos e Skills */ 
+.cursos { 
+    margin-top: 50px;
+    color: white;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    align-items: start;
+    padding: 30px;
+    gap:  30px;
+    justify-content: center;
+}
+.my_skill { 
+    display: grid;
+}
+
+.my_skill h2 { 
+
+    padding: 10px 30px;
+    border-radius: 3px;
+    background-color: #ff5d56;
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    justify-self: start;
+
+}
+.my_skill h2 i { 
+    padding-right: 10px;
+}
+.skill_content { 
+    font-size: 1.3em;
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 10px;
+
+}
+.skill_content h3 { 
+    font-size: 1.5em;
+
+}
+.skill_content ul {
+    display: flex; 
+
+}
+.funfacts { 
+    grid-column: 3/-1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+
+}
+.funfacts h2 { 
+    grid-column: 1/-1;
+    padding: 10px 30px ;
+    border-radius: 3px;
+    font-size: 1.5rem;
+    background-color: #ff5d56;
+    margin-bottom: 30px;
+    justify-self: start;
+}
+.funfacts h2 i { 
+    padding-right: 10px;
+}
+.funfacts ul li { 
+    background-color: #222;
+    border: 3px solid #2f2b2b;
+    grid-template-columns: auto 1fr;
+    align-self: start ; 
+    width: 200px;
+    height: 100px;
+}
+.funfacts ul li i { 
+    grid-row: 1/3;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.5em;
+    color: #ff5d56;
+    border-right: 2px solid #3e3d3d; 
+
+}
+.funfacts ul li span { 
+    font-size: 1.5em ;
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+.funfacts ul li p { 
+    padding-left: 10px;
+    color: #707070;
+    font-weight: bold;
+
+
+
+}
+.funfacts ul { 
+    display: grid;
+    grid-template-columns:  1fr 1fr ;
+    gap: 30px;
+}
+
