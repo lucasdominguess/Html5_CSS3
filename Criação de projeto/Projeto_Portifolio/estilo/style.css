@@ -14,7 +14,8 @@ body {
     background-color: black;
 }
 
-/*/* CONFIGURAÇOES HEADER */ 
+/*/* CONFIGURAÇOES HEADER  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/ 
 
 header { 
     background-color: black;
@@ -38,7 +39,7 @@ header .navegação-primaria {
 }
 header .navegação-primaria li a{ 
     padding: 10px;
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
 }
 header .navegação-primaria li a::after{ 
@@ -56,8 +57,11 @@ header .navegação-primaria li a:hover::after{
     border-bottom: 4px solid #dc3545;
 
 }    
+
+
 /* Download CV secao */ 
-/* CONFIGURAÇOES .section-div */
+/* CONFIGURAÇOES .section-div  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .section-div {
     background-color: black;
     display: grid;
@@ -89,11 +93,14 @@ header .navegação-primaria li a:hover::after{
 .section-div div a{ 
     justify-self: start;
     padding: 15px 40px;
-    border-radius: 5px;
+    border-radius: 8px;
     border: 2px solid rgb(215, 213, 213);
     color: white;
+    font-size: 1rem;
 }
-
+.section-div div a:hover {
+    background: linear-gradient(purple,violet);
+}
 .section-div img { 
    max-width: 100%;
    padding: 0px;
@@ -109,7 +116,8 @@ header .navegação-primaria li a:hover::after{
         transform: translate3d(0,0,0);
     }
 }
-/*configuraçoes Part2 Main */ 
+/*configuraçoes Part2 Main  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/ 
 main{ 
     background-color: black;
     color :white;
@@ -122,7 +130,8 @@ main .sobre {
     justify-content: center;
     padding :40px;
 }
-/* CONFIGURAÇOES .sobre_titulo  */
+/* CONFIGURAÇOES .sobre_titulo   ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .sobre_titulo { 
     margin: 30px 0;
     grid-column: 1/-1;
@@ -154,7 +163,8 @@ main .sobre {
     border-radius: 50%; 
     background-color: #dc3545;
 }
-/* CONFIGURAÇOES .sobre > img  */
+/* CONFIGURAÇOES .sobre > img  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .sobre img {
     animation: ladoSecao .5s ease-in forwards; 
     cursor: pointer;
@@ -167,7 +177,8 @@ main .sobre {
     transition : .5s ease-in;
     filter:blur(1px);
 }
-/* CONFIGURAÇOES .sobre_conteudo  */
+/* CONFIGURAÇOES .sobre_conteudo  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .sobre_conteudo { 
     animation: sobeSecao.6s ease-in-out forwards;
     grid-column: 2/-1;
@@ -175,7 +186,8 @@ main .sobre {
     color: #707070;
     grid-template-columns: 1fr 1fr;
 }
-/* CONFIGURAÇOES .sobre_texto  */
+/* CONFIGURAÇOES .sobre_texto  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .sobre_texto { 
     display: grid;
     grid-column: 1/-1;
@@ -206,7 +218,8 @@ main .sobre {
     align-items: center;*/
 
 } 
-/* CONFIGURAÇOES .sobre_info  */
+/* CONFIGURAÇOES .sobre_info  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 .sobre_info { 
     margin-top: 30px;
     display: grid;
@@ -225,7 +238,8 @@ main .sobre {
     font-size: .9rem;
 }
 
-
+/*configuração de Animação e transição  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 @keyframes sobeSecao{
     from { 
         transition:.5s ;
@@ -245,9 +259,62 @@ main .sobre {
         transform: translate3d(0,0,0);
     }
 }
+@keyframes animationImagemButton { 
+    0% { 
+        opacity: 0;
+        transform:translate3d(0.-90px,0);
+    }
+    100% { 
+        opacity: 1;
+        transform:translate3d(0,0,0);
+    }
+}
 
-/* RESPONSIVO */ 
+
+/* RESPONSIVO  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */ 
  
+@media (max-width:1090px) { 
+    .resume_generica .experience_content,
+    .education_content { 
+        justify-self: center;
+        grid-column: 1/-1;
+    }
+    .resume_generica .education { 
+        grid-column: 1/-1;
+        grid-row: 3;
+        justify-self: center;
+        margin: 30px 0;
+    }
+    .resume_generica .experience {
+        grid-column: 1/-1;
+        grid-row: 1;
+        justify-self: center;
+    }
+    .cursos {
+        grid-template-columns: 1fr;
+    }
+    .cursos .funfacts h2 {
+        justify-self: center;
+    }
+    .cursos .funfacts { 
+        margin-bottom: 30px;
+        text-align: center;
+        grid-template-columns: 1fr;
+        justify-self: center;
+        grid-column: 1/-1;
+    }
+    .cursos .my_skill h2 {
+        justify-self: center;
+    }
+    .cursos .my_skill { 
+       
+        text-align: center;
+        grid-template-columns: 1fr;
+        justify-self: center;
+        grid-column: 1/-1;
+    }
+}
     
 
 @media(max-width:992px) {
@@ -298,7 +365,8 @@ main .sobre {
     }
  }
 
- /*Configuraçoes My_services */ 
+ /*Configuraçoes My_services  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/ 
  .services { 
     margin-top: 30px;
     padding: 60px;
@@ -387,7 +455,8 @@ main .sobre {
     border-bottom: 2px solid red;
     border-left: 2px solid red;
 }
-/*Configuraçoes my-resume*/
+/*Configuraçoes my-resume  ////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 .resume_generica { 
     padding: 30px;
     display: grid;
@@ -406,8 +475,6 @@ main .sobre {
 }
 .resume_generica h2 i{
     margin-right: 10px;
-    
-
 }
 
 .experience { 
@@ -415,12 +482,7 @@ main .sobre {
     grid-column: 1;
     grid-row: 1;
 }
-.education { 
-    margin-bottom: 30px;
-    grid-column: 2;
-    grid-row: 1;
-    
-}
+
 .experience_content ul { 
     color: #dc3545 ;
     gap:10px;
@@ -456,8 +518,6 @@ main .sobre {
 .resume_generica .experience_content div span { 
     color: #dc3545;
     font-weight: bolder ;
-
-
 }
 .resume_generica .experience_content div h3 { 
     margin:  10px 0;
@@ -471,7 +531,8 @@ main .sobre {
     color: #3e3d3d;
 }
 
-/* Config Diplomas e Cursos */ 
+/* Config Diplomas e Cursos education_content  ////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */ 
 .resume_generica .education_content div { 
     background-color: #222;
     padding: 40px; 
@@ -502,6 +563,12 @@ main .sobre {
 .resume_generica .education_content div p{ 
     color :#d0c3c3;
 }
+.education { 
+    margin-bottom: 30px;
+    grid-column: 2;
+    grid-row: 1;
+    
+}
 .education_content ul { 
     color: #dc3545 ;
     gap:10px;
@@ -520,7 +587,8 @@ main .sobre {
 }
 
     
-/*Cursos e Skills */ 
+/*Cursos e Skills my_skill////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////// */ 
 .cursos { 
     margin-top: 50px;
     color: white;
@@ -559,12 +627,13 @@ main .sobre {
 }
 .skill_content h3 { 
     font-size: 1.5em;
-
 }
 .skill_content ul {
     display: flex; 
 
 }
+/*conf funfacts //////////////////////////////////////////////////////////////////////////////////////////////*/
+
 .funfacts { 
     grid-column: 3/-1;
     grid-row: 1;
@@ -621,4 +690,136 @@ main .sobre {
     grid-template-columns:  1fr 1fr ;
     gap: 30px;
 }
+
+/*Configuraçoes .projects ////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////*/
+
+.projects { 
+    padding: 30px;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+    background-color: #151515;
+}
+.projects a { 
+    background-color: #222;
+    text-decoration: none;
+    justify-self: center;
+    padding: 20px 40px;
+    border: 1px solid #333 ;
+    border-radius: 4px;
+    color: #707070;
+}
+.projects a:hover { 
+    color: dodgerblue;
+}
+.projects ul { 
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+}
+.projects_models ul li { 
+    cursor: pointer;
+    background-color: #222;
+    border: 1px solid #333; 
+    padding: 6px 20px;
+}
+/*config armazenamento*/
+.projects_armazenamento ul { 
+    display: grid;
+    margin-top: 60px;
+    gap: 20px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
+}
+.projects_armazenamento ul li { 
+    
+    max-width: 100%;
+    height: 100%;
+}
+.projects_armazenamento ul li.ativo {
+    display: block;
+    animation: animationImagemButton 2s ease-in-out forwards;
+}
+.projects_armazenamento ul li img { 
+    max-width: 100%;
+    height: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* FOOTER /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+footer { 
+    background-color:  black;
+    padding: 30px;
+
+}
+.footer_sociais { 
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    color: white;
+}
+.footer_sociais li { 
+    background-color: #3e3d3d;
+    border-radius: 50%;
+    border: 1px solid #333 ;
+
+}
+.footer_sociais li i { 
+    padding: 30px;
+    font-size: 1.5rem;
+    color: white;
+}
+.footer_sociais li:hover { 
+    transition: .3s ease-in-out;
+    cursor: pointer;
+    background-color: #10ce56;
+}
+.footer_sociais::before { 
+    content:'';
+    height: 5px;
+    width: 200px;
+    position: absolute;
+    background-color: #222;
+    bottom: -30px;
+}
+footer .footer_comercial { 
+    text-align: center;
+    color :white;
+    margin: 90px auto;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
