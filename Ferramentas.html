@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="ferramentas_style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"">
+    
+</head>
+<body> 
+    <h1>Ferramentas Front End</h1>
+    <nav> <!-- Menu Principal -->
+        <a href="Ferramentas.html">Home</a>
+        <a href="Estilizados.html"target="_blank">Estilizados</a>
+        <a href="#">Curiosidades</a>
+        <a href="#">Fale conosco</a>
+          
+      </nav>
+
+    <section id="ex1">
+        <h2>Ex1 : Formulario login simples com = avatarIcon | required |autocomplete |placeholder
+        </h2>
+        <div class="campo">
+            <label for="ilogin">Login</label>
+            <input type="email" name="login"id="ilogin" placeholder="Seu email" autocomplete="email" required><span class="material-icons">person</span>
+        </div>
+        
+        <div class="campo">
+            <label for="isenha">Senha</label>
+            <input type="password" name="senha"id="isenha"placeholder="sua senha"required><span class="material-icons">vpn_key</span>
+        </div>
+        <input type="submit"value=" Entrar ">
+        <input type="button" value=" Esqueci a senha ">
+        
+        
+    </section>
+    <section id="ex2">
+        <form action="" method="POST" autocomplete="on"> 
+             <h2>Ex2 :com minlength | maxlength |placeholder |size </h2>
+        
+        <p>
+            <label for="iusu">usuario:</label>
+            <input type="text" name="iusu" id="iusu"required minlength="5" maxlength="15"size="15"placeholder="Nome do Usuario">
+    <!--required usado para tornar campo de preenchimento obrigatorio -->
+        </p>
+
+        <p>   <!--Pode usar <div> -->
+             <label for="Isen">Senha  </label>:
+             <input type="password" name="sen" id="Isen"required minlength="8" size="15"placeholder="Minimo 8 caracteres">
+        
+        </p>
+
+        <p>
+         <input type="submit" value="Enviar">
+         <input type="reset" value="Limpar">
+         </p>
+        </form>
+        
+    </section>
+    <section id="ex3">
+        <div>
+            <h2>ex3: botao simples media | botao tel </h2>
+            <input type="number" name="Media" id="imedia"
+            min="0" max="10" placeholder="0 a 10" step="0.5">
+            <input type="tel" name="tel" id="itel"
+                pattern="^\(\d{2}\)\d{4,5}-\d{4}$"required>
+        </div>
+    </section>
+    <section id="ex4">
+        <form action="">
+            <h2>ex4 : legend"sexo" | input"checkbox"</h2>
+            <fieldset>
+                <legend> Esporte favoritos </legend>
+                <input type="checkbox" name="esbas" id="iesbas"><label for="iesbas">Basquete</label>
+                <input type="checkbox" name="esfut" id="iesfut"><label for="iesfut">Futebol</label>
+                <input type="checkbox" name="esnat" id="iesnat">Natação
+                <input type="checkbox" name="esten" id="iesten">Tenis
+        
+            </fieldset>
+        
+        
+            <fieldset>
+                <legend>Sexo</legend>
+                <input type="radio" name="sexo" id="isxmas"><label for="isxmas">Masculino</label>
+                <input type="radio" name="sexo" id="isxfem"><label for="isxfem">Feminino</label>
+        
+            </fieldset>
+                <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+        
+                </p>
+            </form> 
+    </section>
+    <section id="ex5">
+        <h2>ex5 : select | option |  optgroup |datalist </h2>
+        <form action="">
+            <label for="iest">Estado</label>
+            <select name="estado" id="iest">
+                <option value=""selected>--escolha--</option>
+                <optgroup label="Regiao Sudeste">
+                <option value="MG">Minas gerais</option>
+                <option value="RJ">Rio de janeiro</option>
+                <option value="SP">São paulo</option>
+                </optgroup>
+    
+                <optgroup label="Regiao Nordeste">
+                <option value="MA">Maranhao</option>
+                <option value="PE">Pernambuco</option>
+                <option value="RN">Rio grande do norte</option>
+                </optgroup>
+    
+    
+            </select>
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p>
+            
+            
+        <h1>Usando datalist: </h1>
+    
+        <label for="iprof">Profissão</label>
+        <input type="text" name="prof" id="iprof" list="istprof">
+      
+        <datalist id="istprof">
+            <option value=""selected>--escolha--</option>
+            <option >administrador</option>
+            <option >contabilista</option>
+            <option >Desenvolvedor</option>
+            <option >professor</option>
+        </datalist>
+        
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p> 
+    
+    <label for="imsg">Mensagem</label><br>
+    <textarea name="msg" id="imsg" cols="30" rows="10"></textarea>
+    
+        </form>
+    </section>
+    <section id="ex6">
+        <form action="" method="get">
+            <h2>ex6 : com oninput "soma de valores" | input type 'range' </h2>
+            <p>
+                
+                <label for="in1">Numero 1</label>
+                <input type="number" name="n1" id="in1" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+            </p>
+            
+            <p>
+                <label for="in2">Numero 2</label>
+                <input type="number" name="n1" id="in2" required
+                oninput="isoma.innerHTML = Number(in1.value) + Number (in2.value)">
+            </p>
+            <p>
+                <label for="isoma">Soma</label>
+                <output name="soma" id="isoma">0</output>
+            </p>
+            <form action="">
+
+                <p>
+                
+                    <label for="inum">Numero:</label>
+                    <input type="range" name="num" id="inum" min="0" max="10" value="5"
+                    oninput="ival.innerHTML = Number(inum.value)">
+                    <output id="ival">5</output>
+                </p>
+             
+            <p>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </p> 
+    </section>
+    
+
+
+</body>
+</html>
